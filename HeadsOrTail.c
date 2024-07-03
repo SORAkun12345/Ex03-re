@@ -21,12 +21,22 @@ void printResults(int results[], int rounds) {
         }
     }
     printf("Heads: %d, Tails: %d\n", heads, tails);
+    if (heads > tails) {
+        printf("You won!\n");
+    } else {
+        printf("You lost!\n");
+    }
 }
 
 int main() {
     srand(time(0));
     int rounds = 3;
     int results[rounds];
+    char name[50];
+
+    printf("Who are you?\n> ");
+    scanf("%s", name);
+    printf("Hello, %s!\n", name);
 
     tossCoin(results, rounds);
     printResults(results, rounds);

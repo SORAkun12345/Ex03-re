@@ -27,6 +27,11 @@ int main() {
     srand(time(0));
     int rounds = 3;
     int results[rounds];
+    char name[50];
+
+    printf("Who are you?\n> ");
+    scanf("%s", name);
+    printf("Hello, %s!\n", name);
 
     tossCoin(results, rounds);
     printResults(results, rounds);
